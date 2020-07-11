@@ -17,25 +17,17 @@ int main()
             bool flag = true;
             count=0;
 
-            if(s.size()==1)
+            for(int j = 0; j<s.size(); j++)
             {
-                if(s[0]=='4') {cout<<"4 "; count++; flagCount=true;}
-                else if(s[0]=='7') {cout<<"7 "; count++; flagCount=true;}
-            }
-            else
-            {
-                for(int j = 0; j<s.size(); j++)
+                if(s[j]=='4' || s[j]=='7') st.insert(s[j]);
+                else
                 {
-                    if(s[j]=='4' || s[j]=='7') st.insert(s[j]);
-                    else
-                    {
-                        flag = false;
-                        break;
-                    }
+                    flag = false;
+                    break;
                 }
-
-                if((st.size()==1 || st.size()==2) && flag==true){cout<<s<<" "; count++; flagCount=true;}
             }
+
+            if((st.size()==1 || st.size()==2) && flag==true){cout<<s<<" "; count++; flagCount=true;}
         }
         if(count==0 && flagCount==false) cout<<"-1";
         cout<<endl;
