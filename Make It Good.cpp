@@ -21,12 +21,10 @@ int main()
 
         int size = v.size();
 
-        for(int i=size-1; i>=1 && ( v[i-1] >= v[i] ); i--)
-            size--;
+        for(int i=size-1; i>=1 && ( v[i-1] >= v[i] ); i--) size--;
             
-        for(int i=size-1; i>=1 && ( v[i-1] <= v[i] ); i--)
-            size--;
-
+        for(int i=size-1; i>=1 && ( v[i-1] <= v[i] ); i--) size--;
+        
         cout << size-1 << endl;
     }
 
