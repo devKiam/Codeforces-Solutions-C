@@ -23,6 +23,7 @@ int main()
        {
            if(v[i-1]>v[i]) need += v[i-1]-v[i];
        }
+        
        cout<<need<<"\n";
     }
 }
